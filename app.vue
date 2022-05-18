@@ -1,9 +1,11 @@
-<script setup>
+<script setup lang="ts">
+import '~/assets/style'
+
 useHead({
-  title: 'Vitesse Nuxt 3',
+  title: 'Hazel',
   link: [
     {
-      rel: 'icon', type: 'image/png', href: '/nuxt.png',
+      rel: 'icon', type: 'image/png', href: '/me.jpg',
     },
   ],
 })
