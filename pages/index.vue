@@ -1,11 +1,9 @@
 <script setup lang='ts'>
-definePageMeta({
-  layout: false,
-})
+
 </script>
 
 <template>
-  <Navigation />
-  <Header />
-  <Footer />
+  <div>
+    <Header />
+  </div>
 </template>

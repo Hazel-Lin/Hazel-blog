@@ -3,9 +3,7 @@ import { computed, defineComponent, ref } from 'vue'
 </script>
 
 <template>
-  <div>
-    123
-  </div>
+  <div />
 </template>
 
 <style lang='scss' scoped>
