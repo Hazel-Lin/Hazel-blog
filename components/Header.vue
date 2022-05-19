@@ -1,9 +1,8 @@
 <script setup lang='ts' >
 import { computed, defineComponent, ref } from 'vue'
-
-const github = './public/nav-github.png'
-const floppy = './public/nav-floppy.png'
-const looking = './public/me.jpg'
+const github = '/nav-github.png'
+const looking = '/me.jpg'
+const articles = []
 </script>
 
 <template>
@@ -31,6 +30,21 @@ const looking = './public/me.jpg'
         </div>
       </div>
     </header>
+    <div className="container">
+      <div>
+        <h2 className="main-header">
+          <span>Latest Articles</span>
+          <NuxtLink to="/blog">
+            View All
+          </NuxtLink>
+        </h2>
+      </div>
+      <h2 className="main-header">
+        <span>Highlights</span> <NuxtLink to="/blog">
+          View All
+        </NuxtLink>
+      </h2>
+    </div>
   </article>
 </template>
 

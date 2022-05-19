@@ -1,12 +1,12 @@
 <script setup lang='ts' >
 import { computed, defineComponent, ref } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
-const moon = './public/moon.png'
-const blog = './public/nav-blog.png'
-const floppy = './public/nav-floppy.png'
-const github = './public/nav-github.png'
-const projects = './public/nav-projects.png'
-const twitter = './public/nav-twitter.png'
+const moon = '/moon.png'
+const blog = '/nav-blog.png'
+const floppy = '/nav-floppy.png'
+const github = '/nav-github.png'
+const projects = '/nav-projects.png'
+const twitter = '/nav-twitter.png'
 
 const mainNavItems = [
   { url: '/blog', icon: blog, label: 'Articles' },

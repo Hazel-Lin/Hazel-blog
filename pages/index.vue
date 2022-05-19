@@ -7,4 +7,5 @@ definePageMeta({
 <template>
   <Navigation />
   <Header />
+  <Footer />
 </template>
