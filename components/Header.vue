@@ -1,8 +1,17 @@
 <script setup lang='ts' >
 import { computed, defineComponent, ref } from 'vue'
+import type { Item } from '~/assets/type/ArticlesList'
+import { articlesList } from '~/data/guides'
+const { config } = useConfig()
+
 const github = '/nav-github.png'
 const looking = '/me.jpg'
-const articles = []
+const articles =articlesList[0].list.filter((item, index) => index <= config.value.latestNum)
+const highlightList = $ref<Item[]>([])
+articlesList[0].list.forEach((item) => {
+  if (item.highlight && highlightList.length <= config.value.highlightNum)
+    highlightList.push(item)
+})
 </script>
 
 <template>
@@ -38,12 +47,14 @@ const articles = []
             View All
           </NuxtLink>
         </h2>
+          <Posts v-for="item,index in articles" :key=index :row="item"/>
       </div>
       <h2 className="main-header">
         <span>Highlights</span> <NuxtLink to="/blog">
           View All
         </NuxtLink>
       </h2>
+      <Posts v-for="item,index in highlightList" :key=index :row="item" year-only show-thumbnail/>
     </div>
   </article>
 </template>
