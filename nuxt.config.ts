@@ -18,4 +18,28 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  components: {
+    dirs: [
+      './components',
+    ],
+    transform: {
+      include: [/\.vue$/, /\.md$/],
+    },
+  },
+  autoImports: {
+    transform: {
+      include: [/\.vue$/, /\.md$/],
+    },
+  },
+  extensions: [
+    '.vue',
+    '.md',
+  ],
+  // 以下配置会直接传递给vite
+  vite: {
+    // @ts-expect-error any
+    vue: {
+      include: [/\.vue$/, /\.md$/],
+    },
+  },
 })
